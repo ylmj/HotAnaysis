@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>信息领域热词分析</title>
+<!-- Custom Theme files -->
+<link href="../css/styleL.css" rel="stylesheet" type="text/css" media="all"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<!--remove-->
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script>$(document).ready(function(c) {
+	$('.close').on('click', function(c){
+		$('.header').fadeOut('slow', function(c){
+	  		$('.header').remove();
+		});
+	});	  
+});
+</script>
+<!--remove-->
+<script src="../js/easyResponsiveTabs.js" type="text/javascript"></script>
+		    <script type="text/javascript">
+			    $(document).ready(function () {
+			        $('#horizontalTab').easyResponsiveTabs({
+			            type: 'default', //Types: default, vertical, accordion           
+			            width: 'auto', //auto or any width like 600px
+			            fit: true   // 100% fit in a container
+			        });
+			    });
+				
+</script>
+<script type="text/javascript">
+document.write("<h1>this is a head</h1>");
+alter(document.getElementById("demo"));
+document.getElementById("demo").style.display="block";
+document.getElementById("demo").innerHTML='<i style="color:red;">两次输入密码不一致</i>';
+var password=document.getElementById("pass");//密码
+var password2=document.getElementById("pass1");//确认密码
+var msg=document.getElementById('p');
+alert(password.value);
+msg.innerHTML='<i style="color:red;">两次输入密码不一致</i>';
+password2.onkeyup=function Rpassword2(){
+	if(this.value!=password.value)
+		{
+		document.getElementById("p").innerHTML='<i style="color:red;">两次输入密码不一致</i>';
+		}
+	else
+		{
+			return true;
+		}
+	return false;
+}
+</script>
+</head>
+<body>
+<!--header start here-->
+<h1>信息领域热词分析登录</h1>
+<div class="header agile">
+	<div class="headder-main w3layouts">
+      <div class="login agileinfo">
+			<div class="sap_tabs">
+				<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+					<ul class="resp-tabs-list w3">
+						<li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>登录</span></li>
+						<li class="resp-tab-item" id="create" aria-controls="tab_item-1" role="tab"><span>注册</span></li>
+						<div class="clearfix"></div>
+					</ul>				  	 
+			  <div class="resp-tabs-container w3-agile">
+						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+							<div class="login-top">
+								<form action="../LoginServlet" method="post">
+									<h6>用户名</h6>
+									<input type="text"  placeholder="小王子" name="username" required="">
+									<h6>密码</h6>
+									<input type="password" class="password" placeholder="Password" name="password" required="">
+									<span class="checkbox1">
+										<label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>Remember me</label>
+									</span>									
+								<div class="login-bottom login-bottom1 w3ls">									
+										<input type="submit" value="登录"/>									
+
+								</div>	
+								</form>
+							</div>
+						</div>
+						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+						<div class="login-top wthree">
+								<form action="../RegisterServlet" method="post">
+									<h6>用户名</h6>
+									<input type="text" placeholder="Name" name="username" required="">
+									<h6>密码</h6>
+									<input type="password" class="password" placeholder="Password" name="password" id="pass">	
+									<h6>确认密码</h6>									
+									<input type="password" class="password confirm_password" placeholder="Confirm Password" name="password2" id="pass1">
+									<p id="demo">0</p>
+								<div class="login-bottom">									
+										<input type="submit" value="注册">	
+									<div class="clear"></div>
+								</div>	
+						  </form>
+							</div>
+							
+						</div>							
+					</div>	
+				</div>
+			</div>	
+		</div>	
+    </div>
+</div>
+<!--header end here-->
+
+<!--copy rights end here-->
+<div class="copy-rights agileits">		 	
+	<p>© 2019</p>		 	
+</div>
+<!--copyrights start here-->
+</body>
+</html>
